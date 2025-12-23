@@ -3,307 +3,203 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hakeem Asam Boi Fresh | Signature Pack</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Hakeem Asam Boi Fresh | Meleleh & Segar</title>
+    <link rel="icon" type="image/png" href="https://cdn.pixabay.com/photo/2016/07/04/10/13/apple-1496375_1280.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary-yellow: #FFD700;
-            --deep-black: #0A0A0A;
-            --accent-gradient: linear-gradient(135deg, #FFD700 0%, #E6B800 100%);
-            --dark-surface: #1A1A1A;
+        body { font-family: 'Poppins', sans-serif; }
+        .bg-gradient-custom {
+            background: linear-gradient(135deg, #facc15 0%, #ca8a04 100%);
         }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-            scroll-behavior: smooth;
+        .bg-dark-gradient {
+            background: linear-gradient(180deg, #18181b 0%, #000000 100%);
         }
-
-        body {
-            background-color: var(--deep-black);
-            color: #ffffff;
-            line-height: 1.6;
-        }
-
-        /* Navigation with Dropdown */
-        nav {
-            background: rgba(0, 0, 0, 0.95);
-            padding: 1rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 2px solid var(--primary-yellow);
-        }
-
-        .logo {
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--primary-yellow);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-        }
-
-        .nav-links li {
-            padding: 0 15px;
-            position: relative;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary-yellow);
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background: var(--dark-surface);
-            min-width: 180px;
-            top: 100%;
-            left: 0;
-            border-top: 2px solid var(--primary-yellow);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        .dropdown-content a {
-            padding: 12px 16px;
-            display: block;
-            border-bottom: 1px solid #333;
-        }
-
-        /* Hero Section with Your Image */
-        .hero {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 120px 10% 60px;
-            min-height: 90vh;
-            background: radial-gradient(circle at top right, #333, #000);
-        }
-
-        .hero-text {
-            flex: 1;
-            padding-right: 50px;
-        }
-
-        .hero-text h1 {
-            font-size: 3.5rem;
-            line-height: 1.1;
-            margin-bottom: 20px;
-            background: var(--accent-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero-image {
-            flex: 1;
-            text-align: right;
-        }
-
-        .hero-image img {
-            width: 100%;
-            max-width: 450px;
-            border-radius: 20px;
-            box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
-            border: 3px solid var(--primary-yellow);
-        }
-
-        /* Information Section */
-        .info-section {
-            padding: 80px 10%;
-            background: white;
-            color: var(--deep-black);
-        }
-
-        .info-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-        }
-
-        .card {
-            background: #f9f9f9;
-            padding: 30px;
-            border-radius: 15px;
-            border-left: 5px solid var(--primary-yellow);
-        }
-
-        /* Products Section */
-        .product-section {
-            padding: 80px 10%;
-            text-align: center;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .product-card {
-            background: var(--dark-surface);
-            border-radius: 20px;
-            overflow: hidden;
-            border: 1px solid #333;
-            transition: 0.4s;
-        }
-
-        .product-card:hover {
-            border-color: var(--primary-yellow);
-            transform: translateY(-10px);
-        }
-
-        .product-card img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-        }
-
-        .product-info {
-            padding: 20px;
-        }
-
-        /* Contact Section */
-        .contact-section {
-            padding: 80px 10%;
-            background: var(--accent-gradient);
-            color: black;
-            text-align: center;
-        }
-
-        .wa-button {
-            background: black;
-            color: white;
-            padding: 18px 40px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            display: inline-block;
-            margin-top: 25px;
-            font-size: 1.1rem;
-            transition: 0.3s;
-        }
-
-        .wa-button:hover {
-            transform: scale(1.05);
-            background: #222;
-        }
-
-        footer {
-            padding: 30px;
-            text-align: center;
-            font-size: 0.8rem;
-            color: #555;
-        }
-
-        @media (max-width: 900px) {
-            .hero { flex-direction: column; text-align: center; }
-            .hero-text { padding-right: 0; margin-bottom: 40px; }
-            .info-container { grid-template-columns: 1fr; }
-        }
+        .dropdown:hover .dropdown-menu { display: block; }
+        .card-hover:hover { transform: translateY(-10px); transition: 0.3s; }
     </style>
 </head>
-<body>
+<body class="bg-zinc-50">
 
-    <nav>
-        <div class="logo">Hakeem Fresh</div>
-        <ul class="nav-links">
-            <li><a href="#">Utama</a></li>
-            <li class="dropdown">
-                <a href="#info">Tentang Kami ▾</a>
-                <div class="dropdown-content">
-                    <a href="#founder">Pemilik</a>
-                    <a href="#proses">Proses Produk</a>
+    <nav class="bg-black text-white sticky top-0 z-50 shadow-xl border-b border-yellow-500/30">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <img src="https://cdn.pixabay.com/photo/2016/07/04/10/13/apple-1496375_1280.png" 
+                     alt="Logo" 
+                     class="h-10 w-auto object-contain bg-yellow-400 p-1 rounded-lg">
+                <span class="text-xl font-extrabold tracking-tighter italic">HAKEEM <span class="text-yellow-400">ASAM BOI</span></span>
+            </div>
+
+            <div class="hidden md:flex space-x-8 items-center text-sm font-bold uppercase tracking-widest">
+                <a href="#home" class="hover:text-yellow-400 transition">Utama</a>
+                
+                <div class="relative dropdown">
+                    <button class="hover:text-yellow-400 transition flex items-center">
+                        Menu Produk <i class="fas fa-chevron-down ml-2 text-xs"></i>
+                    </button>
+                    <div class="dropdown-menu hidden absolute left-0 mt-2 w-48 bg-white text-black shadow-2xl rounded-xl overflow-hidden border-t-4 border-yellow-500">
+                        <a href="#produk" class="block px-4 py-3 hover:bg-yellow-50 transition border-b">Mangga Muda</a>
+                        <a href="#produk" class="block px-4 py-3 hover:bg-yellow-50 transition border-b">Jambu Batu</a>
+                        <a href="#produk" class="block px-4 py-3 hover:bg-yellow-50 transition">Buah Bermusim</a>
+                    </div>
                 </div>
-            </li>
-            <li><a href="#produk">Produk</a></li>
-            <li><a href="#kontak">Hubungi</a></li>
-        </ul>
+
+                <a href="#tentang" class="hover:text-yellow-400 transition">Tentang Kami</a>
+                <a href="#kontak" class="px-5 py-2 bg-yellow-400 text-black rounded-full hover:bg-yellow-300 transition shadow-lg shadow-yellow-500/20">Tempah Sekarang</a>
+            </div>
+        </div>
     </nav>
 
-    <header class="hero">
-        <div class="hero-text">
-            <h1>Signature Fresh Pack</h1>
-            <p>Alami kesegaran buah-buahan premium yang diadun bersama sos masam-manis homemade dan asam boi pilihan. Disediakan segar setiap hari untuk kepuasan anda.</p>
-            <a href="#produk" class="wa-button" style="background: var(--primary-yellow); color: black;">Lihat Menu</a>
-        </div>
-        <div class="hero-image">
-            <img src="https://i.ibb.co/XfqfH6r/image.png" alt="Hakeem Asam Boi Fresh Pack">
-        </div>
-    </header>
-
-    <section id="info" class="info-section">
-        <h2 style="text-align:center; margin-bottom:40px; font-size: 2.5rem;">Informasi Perniagaan</h2>
-        <div class="info-container">
-            <div class="card" id="founder">
-                <h3 style="color: #B8860B;">Profil Usahawan</h3>
-                <p><strong>Luqman Hakeem bin Shahriman (BIF00242)</strong></p>
-                <p>Seorang pelajar berwawasan yang memulakan langkah dalam dunia keusahawanan sejak di bangku sekolah. Hakeem Asam Boi Fresh adalah hasil minat mendalam terhadap kualiti makanan segar.</p>
+    <section id="home" class="bg-dark-gradient py-20 px-6 overflow-hidden relative">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div class="z-10">
+                <span class="text-yellow-400 font-bold tracking-widest uppercase text-sm border-l-4 border-yellow-400 pl-3">Sedia Dimakan & Viral</span>
+                <h1 class="text-5xl md:text-7xl font-extrabold text-white mt-4 leading-tight">
+                    Kecur Liur, <br><span class="text-yellow-400 italic">Pasti Nak Lagi!</span>
+                </h1>
+                <p class="text-zinc-400 mt-6 text-lg max-w-md leading-relaxed">
+                    Buah-buahan segar dipotong setiap hari dicampur dengan asam boi premium & sos masam-manis homemade rahsia.
+                </p>
+                <div class="mt-10 flex space-x-4">
+                    <a href="https://wa.me/60138238942" class="px-8 py-4 bg-gradient-custom text-black font-bold rounded-2xl shadow-xl hover:scale-105 transition">
+                        WhatsApp Sekarang
+                    </a>
+                </div>
             </div>
-            <div class="card" id="proses">
-                <h3 style="color: #B8860B;">Kualiti Produk</h3>
-                <p>Setiap pek mengandungi campuran buah segar (mangga muda, jambu batu, epal hijau) dengan sos masam-manis rahsia. Dijamin bersih dan 'viral' kerana kualiti tekstur yang <em>juicy</em>.</p>
+            <div class="relative flex justify-center">
+                <div class="absolute inset-0 bg-yellow-400/20 blur-[100px] rounded-full"></div>
+                <img src="https://images.unsplash.com/photo-1591073113125-e46713c829ed?auto=format&fit=crop&w=600&q=80" alt="Asam Boi Fresh" class="rounded-3xl shadow-2xl border-4 border-yellow-500/30 transform rotate-3 card-hover">
             </div>
         </div>
     </section>
 
-    <section id="produk" class="product-section">
-        <h2>Pilihan Buah Segar</h2>
-        <div class="grid">
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1591073113125-e46713c829ed?auto=format&fit=crop&q=80&w=500" alt="Mangga">
-                <div class="product-info">
-                    <h3>Mangga Muda Fresh</h3>
-                    <p>Paling popular & rangup!</p>
-                </div>
-            </div>
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1534346589587-9b4b7328784d?auto=format&fit=crop&q=80&w=500" alt="Jambu">
-                <div class="product-info">
-                    <h3>Jambu Batu Premium</h3>
-                    <p>Potongan segar setiap hari.</p>
-                </div>
-            </div>
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1623065639602-03a08e2b8196?auto=format&fit=crop&q=80&w=500" alt="Epal">
-                <div class="product-info">
-                    <h3>Epal Hijau Masam</h3>
-                    <p>Gandingan mantap asam boi.</p>
+    <section id="tentang" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="bg-zinc-900 rounded-[3rem] p-10 md:p-16 text-white shadow-2xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-yellow-400/10 rounded-full -mr-20 -mt-20 blur-3xl"></div>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-3xl font-extrabold text-yellow-400 mb-6 uppercase tracking-tighter">Mengenai Pengasas</h2>
+                        <p class="text-zinc-300 leading-relaxed text-lg italic">
+                            "Projek Hakeem Asam Boi Fresh diterajui oleh Luqman Hakeem bin Shahriman (BIF00242), seorang mahasiswa yang mempunyai minat mendalam dalam bidang keusahawanan sejak di bangku sekolah."
+                        </p>
+                        <div class="mt-8 flex items-center space-x-4">
+                            <div class="h-1 w-20 bg-yellow-400"></div>
+                            <span class="font-bold uppercase tracking-widest text-sm">Visi Keusahawanan</span>
+                        </div>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="bg-white/5 border border-white/10 p-6 rounded-2xl">
+                            <h4 class="font-bold text-yellow-400 mb-2">Kualiti Premium</h4>
+                            <p class="text-sm text-zinc-400">Hanya buah segar setiap hari dengan packaging sealed untuk menjaga kualiti & tekstur juicy.</p>
+                        </div>
+                        <div class="bg-white/5 border border-white/10 p-6 rounded-2xl">
+                            <h4 class="font-bold text-yellow-400 mb-2">Sos Homemade</h4>
+                            <p class="text-sm text-zinc-400">Sos masam-manis yang diadun khas mengikut resepi rahsia keluarga.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="kontak" class="contact-section">
-        <h2>Jom Order Sekarang!</h2>
-        <p>Penghantaran disediakan. Tekan butang di bawah untuk sembang terus dengan Luqman.</p>
-        <a href="https://wa.me/60138238942" class="wa-button">💬 WhatsApp: 013-8238942</a>
+    <section id="produk" class="py-24 px-6 bg-zinc-50">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-black text-black uppercase">Produk <span class="text-yellow-500 italic">Paling Laku</span></h2>
+                <p class="text-zinc-500 mt-2">Disediakan dalam pek sealed yang kemas & cantik</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-3xl p-4 shadow-xl border border-zinc-100 card-hover">
+                    <img src="https://images.unsplash.com/photo-1591073113125-e46713c829ed?auto=format&fit=crop&w=400&q=80" class="w-full h-64 object-cover rounded-2xl mb-6">
+                    <div class="px-2">
+                        <h3 class="text-xl font-bold mb-2">Mangga Muda Asam Boi</h3>
+                        <p class="text-sm text-zinc-500 mb-4">Rangup, masam dan pedas-manis. Kegemaran ramai!</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-black text-yellow-600">RM10.00</span>
+                            <button onclick="order('Mangga Muda')" class="bg-black text-white p-3 rounded-xl hover:bg-yellow-500 transition"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl p-4 shadow-xl border border-zinc-100 card-hover">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8aiaK22nPPOhwPoL3vBII8NRUApdxOZiJxA&s" class="w-full h-64 object-cover rounded-2xl mb-6">
+                    <div class="px-2">
+                        <h3 class="text-xl font-bold mb-2">Jambu Batu Meleleh</h3>
+                        <p class="text-sm text-zinc-500 mb-4">Tekstur rangup jambu batu disalut dengan sos pekat homemade.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-black text-yellow-600">RM10.00</span>
+                            <button onclick="order('Jambu Batu')" class="bg-black text-white p-3 rounded-xl hover:bg-yellow-500 transition"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl p-4 shadow-xl border border-zinc-100 card-hover">
+                    <img src="data:image/jpeg;base64,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" class="w-full h-64 object-cover rounded-2xl mb-6">
+                    <div class="px-2">
+                        <h3 class="text-xl font-bold mb-2">Mixed Fruit Fresh Pack</h3>
+                        <p class="text-sm text-zinc-500 mb-4">Campuran buah-buahan bermusim seperti epal & buah-buahan segar.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-black text-yellow-600">RM12.00</span>
+                            <button onclick="order('Mixed Fruit')" class="bg-black text-white p-3 rounded-xl hover:bg-yellow-500 transition"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 Hakeem Asam Boi Fresh. Luqman Hakeem (BIF00242). Semua Hak Terpelihara.</p>
+    <footer id="kontak" class="bg-black py-20">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-extrabold text-white mb-4 uppercase">Sedia Untuk Mencuba?</h2>
+            <p class="text-zinc-500 mb-10">Klik butang di bawah untuk tempahan segera melalui WhatsApp</p>
+            
+            <a href="https://wa.me/60138238942" class="inline-flex items-center space-x-3 bg-gradient-custom px-10 py-5 rounded-full font-bold text-black shadow-2xl hover:scale-105 transition">
+                <i class="fab fa-whatsapp text-2xl"></i>
+                <span>TEMPAH VIA WHATSAPP (LUQMAN)</span>
+            </a>
+
+            <div class="mt-20 pt-10 border-t border-white/10 grid md:grid-cols-3 gap-8 text-left text-zinc-500 text-sm">
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase tracking-widest text-xs">Lokasi</h4>
+                    <p>Putera Jaya, Setiu, Terengganu</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase tracking-widest text-xs">Waktu Operasi</h4>
+                    <p>Setiap Hari: 10:00 AM - 6:00 PM</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase tracking-widest text-xs">Media Sosial</h4>
+                    <div class="flex space-x-4 mt-2">
+                        <a href="#" class="hover:text-yellow-400"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="hover:text-yellow-400"><i class="fab fa-instagram text-lg"></i></a>
+                        <a href="#" class="hover:text-yellow-400"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            <p class="mt-16 text-[10px] text-zinc-700 uppercase tracking-[0.3em]">©️ 2025 Hakeem Asam Boi Fresh. Built for Success.</p>
+        </div>
     </footer>
 
+    <script>
+        function order(buah) {
+            const phone = "60138238942";
+            const text = encodeURIComponent(`Hai Hakeem Asam Boi Fresh! Saya berminat untuk tempah ${buah}. Boleh beri maklumat lanjut?`);
+            window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
+        }
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
