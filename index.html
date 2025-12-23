@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hakeem Asam Boi Fresh</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #ffeb3b, #000000);
+    color: #fff;
+}
+
+/* NAVBAR */
+nav {
+    background: linear-gradient(90deg, #000, #ffeb3b);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    background: #ffeb3b;
+    color: #000;
+    padding: 8px 15px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu li a {
+    text-decoration: none;
+    margin: 5px;
+    padding: 10px 15px;
+    background: #ffeb3b;
+    color: #000;
+    border-radius: 5px;
+    font-weight: bold;
+    display: block;
+}
+
+.menu li a:hover {
+    background: #000;
+    color: #ffeb3b;
+}
+
+/* DROPDOWN */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #ffeb3b;
+    top: 45px;
+    min-width: 200px;
+    border-radius: 5px;
+    z-index: 99;
+}
+
+.dropdown-content a {
+    color: #000;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* SECTION */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #ffeb3b;
+    margin-bottom: 20px;
+}
+
+/* HOME */
+#home p {
+    font-size: 18px;
+}
+
+/* ABOUT */
+.about {
+    background: rgba(0,0,0,0.8);
+    max-width: 900px;
+    margin: auto;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+/* PRODUCTS */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.product-card {
+    background: #000;
+    border-radius: 12px;
+    padding: 15px;
+}
+
+.product-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.product-card h3 {
+    margin: 10px 0;
+    color: #ffeb3b;
+}
+
+.order-btn {
+    margin-top: 10px;
+    display: inline-block;
+    background: #ffeb3b;
+    color: #000;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.order-btn:hover {
+    background: #000;
+    color: #ffeb3b;
+}
+
+/* CONTACT */
+.contact {
+    background: rgba(0,0,0,0.85);
+    max-width: 700px;
+    margin: auto;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.contact a {
+    display: inline-block;
+    margin-top: 20px;
+    background: #25D366;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+    background: #000;
+    color: #ffeb3b;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu {
+        width: 100%;
+        justify-content: center;
+    }
+
+    section {
+        padding: 40px 15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <div class="logo">Hakeem Asam Boi Fresh</div>
+    <ul class="menu">
+        <li><a href="#home">Utama</a></li>
+        <li class="dropdown">
+            <a href="#">Menu ▼</a>
+            <div class="dropdown-content">
+                <a href="#about">Maklumat Perniagaan</a>
+                <a href="#product">Produk</a>
+                <a href="#contact">Kontak</a>
+            </div>
+        </li>
+    </ul>
+</nav>
+
+<!-- HOME -->
+<section id="home">
+    <h1>Asam Boi Fresh • Juicy • Viral 🍋</h1>
+    <p>Buah segar dipotong setiap hari dengan rasa masam-manis padu</p>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <div class="about">
+        <h2>Maklumat Perniagaan</h2>
+        <p>
+            Pemilik perniagaan <b>Hakeem Asam Boi Fresh</b> ialah
+            <b>Luqman Hakeem bin Shahriman (BIF00242)</b>, seorang pelajar yang
+            mempunyai minat mendalam dalam bidang keusahawanan sejak di bangku sekolah.
+        </p><br>
+        <p>
+            Produk disediakan dalam <b>packaging sealed</b> dengan label jenama
+            serta tarikh penyediaan bagi memastikan kesegaran dan kualiti.
+        </p>
+    </div>
+</section>
+
+<!-- PRODUCT -->
+<section id="product">
+    <h2>Produk Kami</h2>
+    <div class="products">
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1592928302636-91c3c6c36c1c" alt="Asam Boi Fresh">
+            <h3>Asam Boi Fresh Pack</h3>
+            <p>Buah segar + asam boi premium + sos homemade</p>
+            <a class="order-btn" href="https://wa.me/60138238942">Order Sekarang</a>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1604908554164-35a7f94b2a57" alt="Mangga Asam Boi">
+            <h3>Mangga Asam Boi</h3>
+            <p>Rangup, masam dan sangat juicy</p>
+            <a class="order-btn" href="https://wa.me/60138238942">Order Sekarang</a>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce" alt="Buah Campur">
+            <h3>Buah Campur</h3>
+            <p>Warna cantik & mudah viral</p>
+            <a class="order-btn" href="https://wa.me/60138238942">Order Sekarang</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <div class="contact">
+        <h2>Hubungi Kami</h2>
+        <p>📞 013-823 8942</p>
+        <a href="https://wa.me/60138238942">WhatsApp Sekarang</a>
+    </div>
+</section>
+
+<footer>
+    © 2025 Hakeem Asam Boi Fresh | Projek Keusahawanan Digital
+</footer>
+
+<script>
+alert("Selamat datang ke Hakeem Asam Boi Fresh 🍋");
+</script>
+
+</body>
+</html>
